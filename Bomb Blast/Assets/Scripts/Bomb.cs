@@ -31,7 +31,6 @@ public class Bomb : MonoBehaviour {
 
     public void ThrowBomb(int thrower, int next)
     {
-        print("COM " + thrower + " THREW IT TO " + next);
         characters[thrower].hasBomb = false;
         characters[next].hasBomb = true;
         Transform targetLoc = players[next].GetComponent<Transform>();
@@ -50,17 +49,17 @@ public class Bomb : MonoBehaviour {
 
     private void Explode()
     {
-        int loser = -1; 
-        for(int i = 0; i<characters.Count; i++)
-        {
-            if (characters[i].hasBomb)
-            {
-                loser = i;
-                break;
-            }
-        }
-        print("PLAYER " + loser + " LOSES.");
-        GameObject.Destroy(gameObject);
+        //int loser = -1; 
+        //for(int i = 0; i<characters.Count; i++)
+        //{
+        //    if (characters[i].hasBomb)
+        //    {
+        //        loser = i;
+        //        break;
+        //    }
+        //}
+        //print("PLAYER " + loser + " LOSES.");
+        //GameObject.Destroy(gameObject);
 
     }
 }
